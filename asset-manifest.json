@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/static/css/main.29bc8131.css",
+    "main.js": "/static/js/main.b479cf39.js",
+    "static/js/415.4d6acbeb.chunk.js": "/static/js/415.4d6acbeb.chunk.js",
+    "static/js/787.1ed0c42c.chunk.js": "/static/js/787.1ed0c42c.chunk.js",
+    "static/media/avatar.svg": "/static/media/avatar.b3e9a8012c9a3f6345cc831c347c7021.svg",
+    "static/media/about.png": "/static/media/about.a579db56c39714f475c1.png",
+    "static/media/DB.png": "/static/media/DB.16d6d71e74e6e2a8bdfb.png",
+    "static/media/home-main.svg": "/static/media/home-main.359935c39288e92d4dba5c9f2445b91d.svg",
+    "static/media/Razorcart.png": "/static/media/Razorcart.6ebf1be8b2d71c5c23b8.png",
+    "static/media/Aakash-Srinivasan-FlowCV.pdf": "/static/media/Aakash-Srinivasan-FlowCV.15d462631a82b3b88ea2.pdf",
+    "static/media/Todolist.png": "/static/media/Todolist.d7502c66b3783176ac90.png",
+    "static/media/home-bg.jpg": "/static/media/home-bg.dc52d5d40a40b13154b0.jpg",
+    "static/media/Serverless.png": "/static/media/Serverless.0c8b666b53cf9e993019.png",
+    "static/media/pre.svg": "/static/media/pre.4410c5baaa673cc131da.svg",
+    "index.html": "/index.html",
+    "main.29bc8131.css.map": "/static/css/main.29bc8131.css.map",
+    "main.b479cf39.js.map": "/static/js/main.b479cf39.js.map",
+    "415.4d6acbeb.chunk.js.map": "/static/js/415.4d6acbeb.chunk.js.map",
+    "787.1ed0c42c.chunk.js.map": "/static/js/787.1ed0c42c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.29bc8131.css",
+    "static/js/main.b479cf39.js"
+  ]
+}
