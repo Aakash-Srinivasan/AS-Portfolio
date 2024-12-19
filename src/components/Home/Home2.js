@@ -13,56 +13,61 @@ function Home2() {
   return (
     <Container fluid className="home-about-section" id="about">
       <Container>
-        <Row>
+        <Row className="align-items-center">
+          {/* Left Column - About Description */}
           <Col md={8} className="home-about-description">
             <h1 style={{ fontSize: "2.6em" }}>
-              LET ME <span className="purple"> INTRODUCE </span> MYSELF
+            Here’s The <span className="purple">Person</span> Behind The Code!
             </h1>
             <p className="home-about-body">
-              I fell in love with programming and I have at least learnt
-              something, I think… 🤷‍♂️
-              <br />
-              <br />I am fluent in classics like
-              <i>
-                <b className="purple"> HTML,CSS and Javascripts Go. </b>
-              </i>
+              Programming is my symphony, where every line of code strikes a
+              chord of innovation. It’s more than just a skill—it’s an art that
+              fuels my soul. 🎨💻
               <br />
               <br />
-              My field of Interest's are building new &nbsp;
-              <i>
-                <b className="purple">Web Technologies and Products </b> and
-                also in areas related to{" "}
-                <b className="purple">
-                  Devops.
-                </b>
-              </i>
-              <br />
-              <br />
-              Whenever possible, I also apply my passion for developing products
-              with <b className="purple">Node.js</b> and
+              Fluent in classics like
               <i>
                 <b className="purple">
                   {" "}
-                  Modern Javascript Library and Frameworks
+                  React.js, React Native Expo, and Full Stack Development
                 </b>
               </i>
-              &nbsp; like
+              <br />
+              <br />I transform visions into digital marvels. &nbsp;
               <i>
-                <b className="purple"> React.js and Next.js</b>
+                My passions orbit the realms of
+                <b className="purple"> Full Stack wizardry</b> and
+                groundbreaking <b className="purple"> Mobile Development</b>,
+                where creativity knows no bounds.
               </i>
+              <br />
+              <br />
+              With the elegance of
+              <b className="purple"> React Native</b> and the finesse of{" "}
+              <b className="purple"> Next.js</b>, I craft products that don’t
+              just work—they leave a legacy. 🚀✨
             </p>
           </Col>
-          <Col md={4} className="myAvtar">
+
+          {/* Right Column - Avatar Image */}
+          <Col md={4} className="myAvtar text-center">
             <Tilt>
-              <img src={myImg} className="img-fluid" alt="avatar" />
+              <img
+                src={myImg}
+                className="img-fluid "
+                alt="avatar"
+                style={{ maxWidth: "100%", height: "auto" }}
+              />
             </Tilt>
           </Col>
         </Row>
-        <Row>
-          <Col md={12} className="home-about-social">
+
+        {/* Social Links Section */}
+        <Row className="mt-4">
+          <Col md={12} className="home-about-social text-center">
             <h1>FIND ME ON</h1>
             <p>
-              Feel free to <span className="purple">connect </span>with me
+              Feel free to <span className="purple">connect</span> with me
             </p>
             <ul className="home-about-social-links">
               <li className="social-icons">
@@ -70,7 +75,7 @@ function Home2() {
                   href="https://github.com/Aakash-Srinivasan"
                   target="_blank"
                   rel="noreferrer"
-                  className="icon-colour  home-social-icons"
+                  className="icon-colour home-social-icons"
                 >
                   <AiFillGithub />
                 </a>
@@ -80,7 +85,7 @@ function Home2() {
                   href="mailto:aakash4367595@gmail.com"
                   target="_blank"
                   rel="noreferrer"
-                  className="icon-colour  home-social-icons"
+                  className="icon-colour home-social-icons"
                 >
                   <AiFillGoogleCircle />
                 </a>
@@ -90,7 +95,7 @@ function Home2() {
                   href="https://www.linkedin.com/in/aakash-srinivasan-780189246/"
                   target="_blank"
                   rel="noreferrer"
-                  className="icon-colour  home-social-icons"
+                  className="icon-colour home-social-icons"
                 >
                   <FaLinkedinIn />
                 </a>
@@ -112,4 +117,5 @@ function Home2() {
     </Container>
   );
 }
+
 export default Home2;

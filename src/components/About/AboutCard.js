@@ -1,6 +1,5 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
-import { ImPointRight } from "react-icons/im";
 
 function AboutCard() {
   return (
@@ -8,32 +7,21 @@ function AboutCard() {
       <Card.Body>
         <blockquote className="blockquote mb-0">
           <p style={{ textAlign: "justify" }}>
-            Hi Everyone, I am <span className="purple">Aakash Srinivasan </span>
-            from <span className="purple"> Thiruchengode,Namakkal,Tamil Nadu.</span>
+            Hello! I’m <span className="purple">Aakash Srinivasan</span>, a Full Stack Developer at Plattr Tech Studio in Madurai.
             <br />
-            I am currently employed as a Full Stack developer at Plattr Labz in Chennai.
-            <br />
-            I have completed Bachelor of Computer Engineering at Adithya institute of Technologies in Coimbatore,
+            Originally from <span className="purple">Thiruchengode, Namakkal, Tamil Nadu</span>, I hold a Bachelor's degree in Computer Engineering from Adithya Institute of Technology, Coimbatore.
             <br />
             <br />
-            Apart from coding, some other activities that I love to do!
+            With a deep passion for technology and problem-solving, I specialize in building high-quality, scalable applications. I thrive on tackling new challenges and pushing the boundaries of what’s possible in development.
+            <br />
+            <br />
+            If you’re looking for a dedicated and skilled developer, let’s connect and explore how we can collaborate!
           </p>
-          <ul>
-            <li className="about-activity">
-              <ImPointRight /> Website Designing
-            </li>
-            <li className="about-activity">
-              <ImPointRight /> Fitness
-            </li>
-            <li className="about-activity">
-              <ImPointRight /> Travelling
-            </li>
-          </ul>
 
           <p style={{ color: "rgb(155 126 172)" }}>
-            "Strive to build things that make a difference!"{" "}
+            "The best builders are those who can see the entire blueprint, from the smallest button to the largest server!!!"
           </p>
-          <footer className="blockquote-footer">AakashSrinivasan</footer>
+          <footer className="blockquote-footer">Aakash Srinivasan</footer>
         </blockquote>
       </Card.Body>
     </Card>

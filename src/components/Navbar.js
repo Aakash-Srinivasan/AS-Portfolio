@@ -38,8 +38,18 @@ function NavBar() {
     >
       <Container>
         <Navbar.Brand href="/" className="d-flex">
-          <img src={logo} className="img-fluid logo" alt="brand" />
+          <img
+            src={logo}
+            alt="brand"
+            style={{
+              width: "60px", // Control the width of the logo
+              height: "auto", // Maintain the aspect ratio
+              marginBottom: "20px",
+              maxWidth: "100%", // Prevent it from overflowing its container
+            }}
+          />
         </Navbar.Brand>
+
         <Navbar.Toggle
           aria-controls="responsive-navbar-nav"
           onClick={() => {
@@ -89,16 +99,6 @@ function NavBar() {
               >
                 <CgFileDocument style={{ marginBottom: "2px" }} /> Resume
               </Nav.Link>
-            </Nav.Item>
-            <Nav.Item className="fork-btn">
-              <Button
-                href="https://github.com/Aakash-Srinivasan/AS-Portfolio.git"
-                target="_blank"
-                className="fork-btn-inner"
-              >
-                <CgGitFork style={{ fontSize: "1.2em" }} />{" "}
-                <AiFillStar style={{ fontSize: "1.1em" }} />
-              </Button>
             </Nav.Item>
           </Nav>
         </Navbar.Collapse>

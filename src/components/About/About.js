@@ -22,16 +22,27 @@ function About() {
             }}
           >
             <h1 style={{ fontSize: "2.1em", paddingBottom: "20px" }}>
-              Know Who <strong className="purple">I'M</strong>
+            Let me paint a picture of who{" "}
+              <strong className="purple">I'M</strong>
             </h1>
+
             <Aboutcard />
           </Col>
           <Col
             md={5}
-            style={{ paddingTop: "120px", paddingBottom: "50px" }}
+            style={{ paddingTop: "50px", paddingBottom: "0px" }}
             className="about-img"
           >
-            <img src={laptopImg} alt="about" className="img-fluid" />
+            <img
+              src={laptopImg}
+              alt="about"
+              style={{
+                width: "80%", // Control the width of the logo
+                height: "auto", // Maintain the aspect ratio
+                marginBottom: "20px",
+                maxWidth: "100%", // Prevent it from overflowing its container
+              }}
+            />
           </Col>
         </Row>
         <h1 className="project-heading">
