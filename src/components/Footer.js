@@ -4,6 +4,7 @@ import {
   AiFillGithub,
   AiFillGoogleCircle,
   AiFillInstagram,
+  AiFillMediumCircle,
 } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 
@@ -49,6 +50,16 @@ function Footer() {
                 rel="noopener noreferrer"
               >
                 <FaLinkedinIn />
+              </a>
+            </li>
+            <li className="social-icons">
+              <a
+                href="https://www.instagram.com/_.aakash_srinivasan._/"
+                style={{ color: "white" }}
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <AiFillMediumCircle />
               </a>
             </li>
             <li className="social-icons">

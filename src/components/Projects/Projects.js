@@ -3,6 +3,8 @@ import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
 import Razorcart from "../../Assets/Projects/Razorcart.png";
+import Proscanner from "../../Assets/Projects/ProScanner.png";
+import CupidLab from "../../Assets/Projects/cupidlab.png";
 import Todolist from "../../Assets/Projects/Todolist.png";
 import DB from "../../Assets/Projects/DB.png";
 import serverless from "../../Assets/Projects/Serverless.png";
@@ -19,10 +21,30 @@ function Projects() {
           Here are a few projects I've worked on recently.
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
-        <Col md={4} className="project-card">
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={Proscanner}
+              ismobile={true}
+              title="Pro Scanner Lite"
+              description="Pro Scanner Lite is my first mobile app built with bare React Native. It allows users to capture images using the camera or select photos from the gallery and instantly convert them into PDF documents — simple, fast, and offline!"
+              ghLink="https://github.com/Guru-Pravin/Proscanner-lite#"
+              demoLink="https://play.google.com/store/apps/details?id=com.proscannerlite"
+            />
+          </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={CupidLab}
+              ismobile={true}
+              title="Cupid's Lab"
+              description="As a beginner in mobile development, I wanted to challenge myself beyond the usual to-do or weather apps. Using React Native and Expo, I built a playful app that matches love by names, calculates compatibility, suggests pickup lines, generates date ideas, and even creates Love Agreements — all while getting real-world hands-on experience and collecting smart user feedback."
+              ghLink="https://github.com/Aakash-Srinivasan/valentine"
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
             <ProjectCard
               imgPath={Razorcart}
-              isBlog={false}
+              ismobile={false}
               title="Razorcart "
               description="This repository contains the code for a simple e-commerce website built using React.js and Chakra UI. The website allows users to browse through various products and make purchases using the Razorcart payment gateway and also used AWS (DynamoDB) to store the all Payments."
               ghLink="https://github.com/Aakash-Srinivasan/Ecommerce(Razorcart)"
@@ -32,7 +54,7 @@ function Projects() {
           <Col md={4} className="project-card">
             <ProjectCard
               imgPath={serverless}
-              isBlog={false}
+              ismobile={false}
               title="Serverless-TodoAPI"
               description="Serverless-TodoApi is a lightweight and scalable solution for managing todo lists using serverless architecture. Built with simplicity and efficiency in mind, this project leverages serverless computing technologies to offer a robust API for creating, updating, deleting, and retrieving todo items."
               ghLink="https://github.com/Aakash-Srinivasan/Serverless-TodoApi"
@@ -41,16 +63,16 @@ function Projects() {
           <Col md={4} className="project-card">
             <ProjectCard
               imgPath={DB}
-              isBlog={false}
+              ismobile={false}
               title="Unox-DB"
               description="Unox Multiplexes Inc. aims to develop an online portal enabling customers to conveniently book tickets for movie screenings over the internet. This project entails the creation of a robust web application to manage movie schedules, seating capacities, ticket rates, movie information, and user bookings."
-              ghLink="https://github.com/Aakash-Srinivasan/UNOX-DB"            
+              ghLink="https://github.com/Aakash-Srinivasan/UNOX-DB"
             />
           </Col>
           <Col md={4} className="project-card">
             <ProjectCard
               imgPath={Todolist}
-              isBlog={false}
+              ismobile={false}
               title="To-Do-List"
               description="This To-Do List application allows users to manage their tasks efficiently. Users can add, edit, delete, and mark tasks as completed or incomplete."
               ghLink="https://github.com/Aakash-Srinivasan/To-Do-List"

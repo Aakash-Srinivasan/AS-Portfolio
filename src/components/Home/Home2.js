@@ -6,6 +6,7 @@ import {
   AiFillGithub,
   AiFillInstagram,
   AiFillGoogleCircle,
+  AiFillMediumCircle,
 } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 
@@ -17,35 +18,42 @@ function Home2() {
           {/* Left Column - About Description */}
           <Col md={8} className="home-about-description">
             <h1 style={{ fontSize: "2.6em" }}>
-            Here’s The <span className="purple">Person</span> Behind The Code!
+              Here’s The <span className="purple">Person</span> Behind The Code!
             </h1>
             <p className="home-about-body">
-              Programming is my symphony, where every line of code strikes a
-              chord of innovation. It’s more than just a skill—it’s an art that
-              fuels my soul. 🎨💻
+              I’m a passionate <b className="purple">Mobile Developer</b> driven by creativity and precision — specializing in building seamless iOS and Android apps using <b className="purple">React Native</b> and <b className="purple">Expo</b>. 📱🚀
               <br />
               <br />
-              Fluent in classics like
+              I craft frontends that are fast, fluid, and future-ready, powered by{" "}
               <i>
-                <b className="purple">
-                  {" "}
-                  React.js, React Native Expo, and Full Stack Development
-                </b>
+                <b className="purple">React Native</b>, <b className="purple">TypeScript</b>, <b className="purple">Redux</b>, and the <b className="purple">Expo</b> ecosystem
               </i>
+              , bringing visions to life with stunning UI.
               <br />
-              <br />I transform visions into digital marvels. &nbsp;
+              <br />
+              Every experience I design is enhanced by{" "}
               <i>
-                My passions orbit the realms of
-                <b className="purple"> Full Stack wizardry</b> and
-                groundbreaking <b className="purple"> Mobile Development</b>,
-                where creativity knows no bounds.
+                <b className="purple">NativeWind</b>, <b className="purple">Styled Components</b>, and <b className="purple">Tailwind CSS</b>
               </i>
+              , delivering clean and intuitive interfaces.
               <br />
               <br />
-              With the elegance of
-              <b className="purple"> React Native</b> and the finesse of{" "}
-              <b className="purple"> Next.js</b>, I craft products that don’t
-              just work—they leave a legacy. 🚀✨
+              Behind the scenes, I architect resilient backends using{" "}
+              <i>
+                <b className="purple">Supabase</b> and <b className="purple">Firebase</b>
+              </i>
+              , and integrate{" "}
+              <b className="purple">RESTful APIs</b> with precision through <b className="purple">Axios</b>.
+              <br />
+              <br />
+              Equipped with tools like{" "}
+              <i>
+                <b className="purple">VS Code</b>, <b className="purple">Postman</b>, <b className="purple">Mockoon</b>, <b className="purple">Figma</b>, and <b className="purple">Bruno</b>
+              </i>
+              , I transform ideas into polished digital realities.
+              <br />
+              <br />
+              For me, coding isn’t just about building apps — it’s about creating experiences that inspire, engage, and leave a lasting legacy. ✨
             </p>
           </Col>
 
@@ -54,13 +62,14 @@ function Home2() {
             <Tilt>
               <img
                 src={myImg}
-                className="img-fluid "
+                className="img-fluid"
                 alt="avatar"
                 style={{ maxWidth: "100%", height: "auto" }}
               />
             </Tilt>
           </Col>
         </Row>
+
 
         {/* Social Links Section */}
         <Row className="mt-4">
@@ -98,6 +107,16 @@ function Home2() {
                   className="icon-colour home-social-icons"
                 >
                   <FaLinkedinIn />
+                </a>
+              </li>
+              <li className="social-icons">
+                <a
+                  href="https://medium.com/@aakash4367595"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="icon-colour home-social-icons"
+                >
+                  <AiFillMediumCircle />
                 </a>
               </li>
               <li className="social-icons">
