@@ -8,16 +8,25 @@ import ReactPDF from "react-pdf-js";
 
 function ResumeNew() {
   const [width, setWidth] = useState(1200);
-  const [numPages, setNumPages] = useState(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     setWidth(window.innerWidth);
   }, []);
- console.log(numPages);
+
+  useEffect(() => {
+    // Always show loading for 3 seconds minimum
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   const onDocumentLoadSuccess = ({ numPages }) => {
-    setNumPages(numPages);
-    setLoading(false);
+    // We don't immediately remove loading here.
+    // Timer will handle it after 3 seconds.
+    console.log("PDF loaded with", numPages, "pages");
   };
 
   return (
@@ -39,12 +48,14 @@ function ResumeNew() {
                 <Spinner animation="border" variant="primary" />
               </div>
             )}
-            <ReactPDF
-              file={pdf}
-              onLoadSuccess={onDocumentLoadSuccess}
-              page={1}
-              scale={width > 786 ? 1.7 : 0.6}
-            />
+            {!loading && (
+              <ReactPDF
+                file={pdf}
+                onLoadSuccess={onDocumentLoadSuccess}
+                page={1}
+                scale={width > 786 ? 1.7 : 0.6}
+              />
+            )}
           </div>
         </Row>
 
