@@ -1,7 +1,6 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
 import {
-  SiVisualstudiocode,
   SiPostman,
   SiSlack,
   SiEclipseide,
@@ -9,12 +8,13 @@ import {
   SiFigma,
   SiSupabase,
 } from "react-icons/si";
+import { BiLogoVisualStudio } from "react-icons/bi";
 
 function Toolstack() {
   return (
     <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
       <Col xs={4} md={2} className="tech-icons">
-        <SiVisualstudiocode />
+        <BiLogoVisualStudio />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
         <SiSupabase />
