@@ -5,9 +5,11 @@ import Particle from "../Particle";
 import Razorcart from "../../Assets/Projects/Razorcart.png";
 import Proscanner from "../../Assets/Projects/ProScanner.png";
 import CupidLab from "../../Assets/Projects/cupidlab.png";
+import Swipes from "../../Assets/Projects/swipes.png";
 import Todolist from "../../Assets/Projects/Todolist.png";
 import DB from "../../Assets/Projects/DB.png";
 import serverless from "../../Assets/Projects/Serverless.png";
+import video1 from './swipe.mp4';
 
 function Projects() {
   return (
@@ -38,6 +40,17 @@ function Projects() {
               title="Cupid's Lab"
               description="As a beginner in mobile development, I wanted to challenge myself beyond the usual to-do or weather apps. Using React Native and Expo, I built a playful app that matches love by names, calculates compatibility, suggests pickup lines, generates date ideas, and even creates Love Agreements — all while getting real-world hands-on experience and collecting smart user feedback."
               ghLink="https://github.com/Aakash-Srinivasan/valentine"
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={Swipes}
+              ismobile={true}
+              title="Swipes,"
+              description="This project showcases my experience building a Tinder-style swipe animation using React Native Reanimated 3. The goal was to create a smooth, interactive user interface where cards could be swiped left or right, mimicking the functionality found in apps like Tinder."
+              ghLink="https://github.com/Aakash-Srinivasan/swipeUI"
+              videoPath={video1}
             />
           </Col>
 
