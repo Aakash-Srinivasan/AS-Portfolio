@@ -5,6 +5,7 @@ import yourFirstArticleImage from "../../Assets/Articles/image1.png";
 import yourSecondArticleImage from "../../Assets/Articles/image2.png";
 import yourthirdarticleImage from "../../Assets/Articles/My Journey with React Native Reanimated 3.png";
 import ArticlesCards from "./ArticlesCards";
+import yourfourtharticleImage from "../../Assets/Articles/expense.png";
 
 
 function Articles() {
@@ -46,6 +47,15 @@ function Articles() {
               title="Swipe,Cry,Repeat: My Journey with React Native Reanimated 3"
               description="In this article, I share my experience building a Tinder-style swipe animation using React Native Reanimated 3.From struggling with confusing docs and broken tutorials to finally achieving smooth swipes, I walk through the challenges, learnings, and breakthroughs.Perfect for developers who want a real, honest look at mastering complex animations!"
               ghLink="https://medium.com/@aakash4367595/swipe-cry-repeat-my-journey-with-react-native-reanimated-3-fbeb9596683e"
+            />
+          </Col>
+          <Col md={6} className="project-card">
+            <ArticlesCards
+              imgPath={yourfourtharticleImage}
+              isBlog={true}
+              title="Offline-First Architecture in React Native — Building a Bulletproof Expense Tracker"
+              description="Built an Offline-First Expense Tracker in React Native using SQLite, Drizzle, and Supabase. In this article, I break down how I handled offline caching, queued actions, and real-time syncing — with code, architecture, and key lessons learned."
+              ghLink="https://medium.com/@aakash4367595/offline-first-architecture-in-react-native-building-a-bulletproof-expense-tracker-2eae8be4ded3"
             />
           </Col>
         </Row>

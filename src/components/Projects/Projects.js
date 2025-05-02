@@ -6,10 +6,12 @@ import Razorcart from "../../Assets/Projects/Razorcart.png";
 import Proscanner from "../../Assets/Projects/ProScanner.png";
 import CupidLab from "../../Assets/Projects/cupidlab.png";
 import Swipes from "../../Assets/Projects/swipes.png";
+import Expense from "../../Assets/Projects/expense.png";
 import Todolist from "../../Assets/Projects/Todolist.png";
 import DB from "../../Assets/Projects/DB.png";
 import serverless from "../../Assets/Projects/Serverless.png";
 import video1 from './swipe.mp4';
+import video2 from './expense.mp4';
 
 function Projects() {
   return (
@@ -47,10 +49,22 @@ function Projects() {
             <ProjectCard
               imgPath={Swipes}
               ismobile={true}
-              title="Swipes,"
+              title="Swipes"
               description="This project showcases my experience building a Tinder-style swipe animation using React Native Reanimated 3. The goal was to create a smooth, interactive user interface where cards could be swiped left or right, mimicking the functionality found in apps like Tinder."
               ghLink="https://github.com/Aakash-Srinivasan/swipeUI"
               videoPath={video1}
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={Expense}
+              ismobile={true}
+              title="Expense Tracker"
+              description="Expense Tracker
+Built a React Native app with full offline capabilities using SQLite for local storage and Supabase for cloud sync. Implemented queued actions, network state detection, and Drizzle ORM for seamless syncing. Users can add, edit, and delete expenses offline with automatic synchronization when back online."
+              ghLink="https://github.com/Aakash-Srinivasan/Expense-Tracker"
+              videoPath={video2}
             />
           </Col>
 

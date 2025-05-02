@@ -6,7 +6,7 @@ import {  CgWebsite } from "react-icons/cg";
 import { FaGooglePlay } from "react-icons/fa";
 import { BsGithub } from "react-icons/bs";
 import ReactPlayer from "react-player";
-import video1 from "./swipe.mp4";
+// import video1 from "./swipe.mp4";
 import { MdVideoCameraFront } from "react-icons/md";
 
 
@@ -66,7 +66,7 @@ function ProjectCards(props) {
         </Modal.Header>
         <Modal.Body style={{ padding: 0 }}>
           <ReactPlayer
-            url={video1}
+            url={props.videoPath}
             playing
             controls
             width="100%"
