@@ -3,7 +3,7 @@ import { Col, Row } from "react-bootstrap";
 import {
   SiPostman,
   SiSlack,
-  SiEclipseide,
+  SiBruno,
   SiMysql,
   SiFigma,
   SiSupabase,
@@ -26,7 +26,7 @@ function Toolstack() {
         <SiSlack />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <SiEclipseide />
+      <SiBruno />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
         <SiMysql />

@@ -6,6 +6,7 @@ import yourSecondArticleImage from "../../Assets/Articles/image2.png";
 import yourthirdarticleImage from "../../Assets/Articles/My Journey with React Native Reanimated 3.png";
 import ArticlesCards from "./ArticlesCards";
 import yourfourtharticleImage from "../../Assets/Articles/expense.png";
+import yourfiftharticleImage from "../../Assets/Articles/drafter.png";
 
 
 function Articles() {
@@ -56,6 +57,16 @@ function Articles() {
               title="Offline-First Architecture in React Native — Building a Bulletproof Expense Tracker"
               description="Built an Offline-First Expense Tracker in React Native using SQLite, Drizzle, and Supabase. In this article, I break down how I handled offline caching, queued actions, and real-time syncing — with code, architecture, and key lessons learned."
               ghLink="https://medium.com/@aakash4367595/offline-first-architecture-in-react-native-building-a-bulletproof-expense-tracker-2eae8be4ded3"
+            />
+          </Col>
+          <Col md={6} className="project-card">
+            <ArticlesCards
+              imgPath={yourfiftharticleImage}
+              isBlog={true}
+              title="Drafter — A Beautiful Notes App with Dynamic Theming, Custom Fonts & Animations in React Native"
+              description="Learn how I built a local notes app with smooth light/dark theme transitions, custom fonts, and voice playback — all using Expo, NativeWind, and AsyncStorage.
+In this article, I share my approach, the challenges I faced, and how I tackled dynamic theming and font switching without external state libraries."
+              ghLink="https://medium.com/@aakash4367595/drafter-a-beautiful-notes-app-with-dynamic-theming-custom-fonts-animations-in-react-native-074d9aaab483"
             />
           </Col>
         </Row>

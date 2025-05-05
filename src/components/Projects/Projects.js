@@ -8,10 +8,12 @@ import CupidLab from "../../Assets/Projects/cupidlab.png";
 import Swipes from "../../Assets/Projects/swipes.png";
 import Expense from "../../Assets/Projects/expense.png";
 import Todolist from "../../Assets/Projects/Todolist.png";
+import Drafter from "../../Assets/Projects/drafter.png";
 import DB from "../../Assets/Projects/DB.png";
 import serverless from "../../Assets/Projects/Serverless.png";
-import video1 from './swipe.mp4';
-import video2 from './expense.mp4';
+import video1 from '../../Assets/DemoVideo/swipe.mp4';
+import video2 from '../../Assets/DemoVideo/expense.mp4';
+import video3 from '../../Assets/DemoVideo/video3.mp4';
 
 function Projects() {
   return (
@@ -65,6 +67,18 @@ function Projects() {
 Built a React Native app with full offline capabilities using SQLite for local storage and Supabase for cloud sync. Implemented queued actions, network state detection, and Drizzle ORM for seamless syncing. Users can add, edit, and delete expenses offline with automatic synchronization when back online."
               ghLink="https://github.com/Aakash-Srinivasan/Expense-Tracker"
               videoPath={video2}
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={Drafter}
+              ismobile={true}
+              title="Drafter"
+              description=" Drafter – A Dynamic Notes App
+A local notes app built with Expo featuring full CRUD, dynamic light/dark theme switching with smooth animations, and customizable fonts. Preferences are persisted using AsyncStorage. Also includes voice playback of notes via Expo Speech. Built using Expo Router, NativeWind, and custom drawer/tab navigation."
+              ghLink="https://github.com/Aakash-Srinivasan/writer"
+              videoPath={video3}
             />
           </Col>
 
