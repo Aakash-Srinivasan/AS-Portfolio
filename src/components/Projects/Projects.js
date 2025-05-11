@@ -9,11 +9,13 @@ import Swipes from "../../Assets/Projects/swipes.png";
 import Expense from "../../Assets/Projects/expense.png";
 import Todolist from "../../Assets/Projects/Todolist.png";
 import Drafter from "../../Assets/Projects/drafter.png";
+import HealTime from "../../Assets/Projects/HealTime.png"
 import DB from "../../Assets/Projects/DB.png";
 import serverless from "../../Assets/Projects/Serverless.png";
 import video1 from '../../Assets/DemoVideo/swipe.mp4';
 import video2 from '../../Assets/DemoVideo/expense.mp4';
 import video3 from '../../Assets/DemoVideo/video3.mp4';
+import video4 from '../../Assets/DemoVideo/medic.mp4';
 
 function Projects() {
   return (
@@ -79,6 +81,17 @@ Built a React Native app with full offline capabilities using SQLite for local s
 A local notes app built with Expo featuring full CRUD, dynamic light/dark theme switching with smooth animations, and customizable fonts. Preferences are persisted using AsyncStorage. Also includes voice playback of notes via Expo Speech. Built using Expo Router, NativeWind, and custom drawer/tab navigation."
               ghLink="https://github.com/Aakash-Srinivasan/writer"
               videoPath={video3}
+            />
+          </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={HealTime}
+              ismobile={true}
+              title="HealTime"
+              description="💊 HealTime – Intelligent Medicine Reminder AppHealTime
+Stay on track with your health using HealTime — a sleek React Native app powered by Expo Notifications and Task Manager. It schedules personalized medication alerts, supports snooze actions, and tracks doses with local persistence via AsyncStorage. Built with elegant UI, real-time reminders, and smart reset logic, HealTime ensures you never miss a dose — even if you forget. A blend of tech and care, right in your pocket."
+              ghLink="https://github.com/Aakash-Srinivasan/Medic.git"
+              videoPath={video4}
             />
           </Col>
 

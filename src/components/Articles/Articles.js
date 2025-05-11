@@ -7,6 +7,7 @@ import yourthirdarticleImage from "../../Assets/Articles/My Journey with React N
 import ArticlesCards from "./ArticlesCards";
 import yourfourtharticleImage from "../../Assets/Articles/expense.png";
 import yourfiftharticleImage from "../../Assets/Articles/drafter.png";
+import heal from "../../Assets/Articles/heal.png";
 
 
 function Articles() {
@@ -67,6 +68,15 @@ function Articles() {
               description="Learn how I built a local notes app with smooth light/dark theme transitions, custom fonts, and voice playback — all using Expo, NativeWind, and AsyncStorage.
 In this article, I share my approach, the challenges I faced, and how I tackled dynamic theming and font switching without external state libraries."
               ghLink="https://medium.com/@aakash4367595/drafter-a-beautiful-notes-app-with-dynamic-theming-custom-fonts-animations-in-react-native-074d9aaab483"
+            />
+          </Col>
+          <Col md={6} className="project-card">
+            <ArticlesCards
+              imgPath={heal}
+              isBlog={true}
+              title="Building a Reliable Medication Reminder App with Expo: My Journey Using Notifications and TaskManager"
+              description="Explore how I built a Smart Medication Reminder app using Expo Notifications and Expo Task Manager. This app leverages AsyncStorage for local data management and offers intuitive features like snooze options, timely reminders, and status resets to ensure you never miss a dose. Check out the full journey and technical insights behind this project."
+              ghLink="https://medium.com/@aakash4367595/building-a-reliable-medication-reminder-app-with-expo-my-journey-using-notifications-and-3ad8a187d1b9"
             />
           </Col>
         </Row>
