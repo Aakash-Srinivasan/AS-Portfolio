@@ -8,7 +8,7 @@ import ArticlesCards from "./ArticlesCards";
 import yourfourtharticleImage from "../../Assets/Articles/expense.png";
 import yourfiftharticleImage from "../../Assets/Articles/drafter.png";
 import heal from "../../Assets/Articles/heal.png";
-
+import testArticle from '../../Assets/Articles/testArticle.png';
 
 function Articles() {
   return (
@@ -77,6 +77,15 @@ In this article, I share my approach, the challenges I faced, and how I tackled 
               title="Building a Reliable Medication Reminder App with Expo: My Journey Using Notifications and TaskManager"
               description="Explore how I built a Smart Medication Reminder app using Expo Notifications and Expo Task Manager. This app leverages AsyncStorage for local data management and offers intuitive features like snooze options, timely reminders, and status resets to ensure you never miss a dose. Check out the full journey and technical insights behind this project."
               ghLink="https://medium.com/@aakash4367595/building-a-reliable-medication-reminder-app-with-expo-my-journey-using-notifications-and-3ad8a187d1b9"
+            />
+          </Col>
+         <Col md={6} className="project-card">
+            <ArticlesCards
+              imgPath={testArticle}
+              isBlog={true}
+              title="🧪 From Developer to Tester: How I Automated My App with Maestro (The Easy Way)"
+              description="In this article, I explore how I’ve integrated Maestro Automation Testing into my HealTime app, a sleek React Native solution for managing medication reminders. I walk through the process of setting up Maestro, writing automation scripts, and running tests efficiently on a physical device. Watch the video showcasing the seamless process of running these automated tests, highlighting how Maestro can simplify the testing workflow for developers and testers alike."
+              ghLink="https://medium.com/@aakash4367595/from-developer-to-tester-how-i-automated-my-app-with-maestro-the-easy-way-386c43e7b0c4"
             />
           </Col>
         </Row>

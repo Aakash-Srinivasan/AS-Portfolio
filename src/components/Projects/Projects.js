@@ -16,6 +16,7 @@ import video1 from '../../Assets/DemoVideo/swipe.mp4';
 import video2 from '../../Assets/DemoVideo/expense.mp4';
 import video3 from '../../Assets/DemoVideo/video3.mp4';
 import video4 from '../../Assets/DemoVideo/medic.mp4';
+import testDemo from '../../Assets/DemoVideo/testDemo.mp4';
 
 function Projects() {
   return (
@@ -88,10 +89,10 @@ A local notes app built with Expo featuring full CRUD, dynamic light/dark theme 
               imgPath={HealTime}
               ismobile={true}
               title="HealTime"
-              description="💊 HealTime – Intelligent Medicine Reminder AppHealTime
-Stay on track with your health using HealTime — a sleek React Native app powered by Expo Notifications and Task Manager. It schedules personalized medication alerts, supports snooze actions, and tracks doses with local persistence via AsyncStorage. Built with elegant UI, real-time reminders, and smart reset logic, HealTime ensures you never miss a dose — even if you forget. A blend of tech and care, right in your pocket."
+              description="💊 HealTime – A modern React Native app that helps users manage their medication with timely reminders, dose tracking, and smart snooze options. Designed with a clean UI and persistent storage, it now includes Maestro automation testing for reliable performance and efficient quality assurance using Maestro."
               ghLink="https://github.com/Aakash-Srinivasan/Medic.git"
               videoPath={video4}
+              testingVideoPath={testDemo}
             />
           </Col>
 
