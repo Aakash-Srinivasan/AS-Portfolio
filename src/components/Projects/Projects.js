@@ -23,14 +23,17 @@ function Projects() {
     <Container fluid className="project-section">
       <Particle />
       <Container>
-        <h1 className="project-heading">
-          My Recent <strong className="purple">Works </strong>
-        </h1>
-        <p style={{ color: "white" }}>
-          Here are a few projects I've worked on recently.
-        </p>
+        <div className="reveal">
+          <p className="section-kicker">Portfolio</p>
+          <h1 className="project-heading">
+            My Recent <strong className="purple">Works </strong>
+          </h1>
+          <p style={{ color: "white" }}>
+            Here are a few projects I've worked on recently.
+          </p>
+        </div>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
-          <Col md={4} className="project-card">
+          <Col md={4} className="project-card reveal">
             <ProjectCard
               imgPath={Proscanner}
               ismobile={true}
@@ -40,7 +43,7 @@ function Projects() {
               demoLink="https://play.google.com/store/apps/details?id=com.proscannerlite"
             />
           </Col>
-          <Col md={4} className="project-card">
+          <Col md={4} className="project-card reveal">
             <ProjectCard
               imgPath={CupidLab}
               ismobile={true}
@@ -50,7 +53,7 @@ function Projects() {
             />
           </Col>
 
-          <Col md={4} className="project-card">
+          <Col md={4} className="project-card reveal">
             <ProjectCard
               imgPath={Swipes}
               ismobile={true}
@@ -61,7 +64,7 @@ function Projects() {
             />
           </Col>
 
-          <Col md={4} className="project-card">
+          <Col md={4} className="project-card reveal">
             <ProjectCard
               imgPath={Expense}
               ismobile={true}
@@ -73,7 +76,7 @@ Built a React Native app with full offline capabilities using SQLite for local s
             />
           </Col>
 
-          <Col md={4} className="project-card">
+          <Col md={4} className="project-card reveal">
             <ProjectCard
               imgPath={Drafter}
               ismobile={true}
@@ -84,7 +87,7 @@ A local notes app built with Expo featuring full CRUD, dynamic light/dark theme 
               videoPath={video3}
             />
           </Col>
-          <Col md={4} className="project-card">
+          <Col md={4} className="project-card reveal">
             <ProjectCard
               imgPath={HealTime}
               ismobile={true}
@@ -96,7 +99,7 @@ A local notes app built with Expo featuring full CRUD, dynamic light/dark theme 
             />
           </Col>
 
-          <Col md={4} className="project-card">
+          <Col md={4} className="project-card reveal">
             <ProjectCard
               imgPath={Razorcart}
               ismobile={false}
@@ -106,7 +109,7 @@ A local notes app built with Expo featuring full CRUD, dynamic light/dark theme 
               demoLink="https://d3ufb1e959ciue.cloudfront.net/"
             />
           </Col>
-          <Col md={4} className="project-card">
+          <Col md={4} className="project-card reveal">
             <ProjectCard
               imgPath={serverless}
               ismobile={false}
@@ -115,7 +118,7 @@ A local notes app built with Expo featuring full CRUD, dynamic light/dark theme 
               ghLink="https://github.com/Aakash-Srinivasan/Serverless-TodoApi"
             />
           </Col>
-          <Col md={4} className="project-card">
+          <Col md={4} className="project-card reveal">
             <ProjectCard
               imgPath={DB}
               ismobile={false}
@@ -124,7 +127,7 @@ A local notes app built with Expo featuring full CRUD, dynamic light/dark theme 
               ghLink="https://github.com/Aakash-Srinivasan/UNOX-DB"
             />
           </Col>
-          <Col md={4} className="project-card">
+          <Col md={4} className="project-card reveal">
             <ProjectCard
               imgPath={Todolist}
               ismobile={false}

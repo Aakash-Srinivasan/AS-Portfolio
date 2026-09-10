@@ -15,15 +15,18 @@ function Articles() {
     <Container fluid className="project-section">
       <Particle />
       <Container>
-        <h1 className="project-heading">
-          My Recent <strong className="purple">Articles</strong>
-        </h1>
-        <p style={{ color: "white" }}>
-          Here are a few articles I've written recently on Medium.
-        </p>
+        <div className="reveal">
+          <p className="section-kicker">Writing</p>
+          <h1 className="project-heading">
+            My Recent <strong className="purple">Articles</strong>
+          </h1>
+          <p style={{ color: "white" }}>
+            Here are a few articles I've written recently on Medium.
+          </p>
+        </div>
 
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
-          <Col md={6} className="project-card">
+          <Col md={6} className="project-card reveal">
             <ArticlesCards
               imgPath={yourFirstArticleImage} // You can use an image if you have one, else a Medium logo
               isBlog={true}
@@ -33,7 +36,7 @@ function Articles() {
             />
           </Col>
 
-          <Col md={6} className="project-card">
+          <Col md={6} className="project-card reveal">
             <ArticlesCards
               imgPath={yourSecondArticleImage}
               isBlog={true}
@@ -42,7 +45,7 @@ function Articles() {
               ghLink="https://medium.com/@aakash4367595/no-backend-no-problem-use-telegram-bots-to-get-real-time-feedback-in-react-native-8ff9699a6b7d"
             />
           </Col>
-          <Col md={6} className="project-card">
+          <Col md={6} className="project-card reveal">
             <ArticlesCards
               imgPath={yourthirdarticleImage}
               isBlog={true}
@@ -51,7 +54,7 @@ function Articles() {
               ghLink="https://medium.com/@aakash4367595/swipe-cry-repeat-my-journey-with-react-native-reanimated-3-fbeb9596683e"
             />
           </Col>
-          <Col md={6} className="project-card">
+          <Col md={6} className="project-card reveal">
             <ArticlesCards
               imgPath={yourfourtharticleImage}
               isBlog={true}
@@ -60,7 +63,7 @@ function Articles() {
               ghLink="https://medium.com/@aakash4367595/offline-first-architecture-in-react-native-building-a-bulletproof-expense-tracker-2eae8be4ded3"
             />
           </Col>
-          <Col md={6} className="project-card">
+          <Col md={6} className="project-card reveal">
             <ArticlesCards
               imgPath={yourfiftharticleImage}
               isBlog={true}
@@ -70,7 +73,7 @@ In this article, I share my approach, the challenges I faced, and how I tackled 
               ghLink="https://medium.com/@aakash4367595/drafter-a-beautiful-notes-app-with-dynamic-theming-custom-fonts-animations-in-react-native-074d9aaab483"
             />
           </Col>
-          <Col md={6} className="project-card">
+          <Col md={6} className="project-card reveal">
             <ArticlesCards
               imgPath={heal}
               isBlog={true}
@@ -79,7 +82,7 @@ In this article, I share my approach, the challenges I faced, and how I tackled 
               ghLink="https://medium.com/@aakash4367595/building-a-reliable-medication-reminder-app-with-expo-my-journey-using-notifications-and-3ad8a187d1b9"
             />
           </Col>
-         <Col md={6} className="project-card">
+         <Col md={6} className="project-card reveal">
             <ArticlesCards
               imgPath={testArticle}
               isBlog={true}

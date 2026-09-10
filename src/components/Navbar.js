@@ -3,7 +3,7 @@ import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
 import logo from "../Assets/logo.png";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import {
   AiOutlineHome,
   AiOutlineFundProjectionScreen,
@@ -16,6 +16,7 @@ import { CgFileDocument } from "react-icons/cg";
 function NavBar() {
   const [expand, updateExpanded] = useState(false);
   const [navColour, updateNavbar] = useState(false);
+  const location = useLocation();
 
   function scrollHandler() {
     if (window.scrollY >= 20) {
@@ -27,6 +28,9 @@ function NavBar() {
 
   window.addEventListener("scroll", scrollHandler);
 
+  const linkClass = (path) =>
+    location.pathname === path ? "nav-link-active" : "";
+
   return (
     <Navbar
       expanded={expand}
@@ -35,17 +39,11 @@ function NavBar() {
       className={navColour ? "sticky" : "navbar"}
     >
       <Container>
-        <Navbar.Brand href="/" className="d-flex">
-          <img
-            src={logo}
-            alt="brand"
-            style={{
-              width: "60px", // Control the width of the logo
-              height: "auto", // Maintain the aspect ratio
-              marginBottom: "20px",
-              maxWidth: "100%", // Prevent it from overflowing its container
-            }}
-          />
+        <Navbar.Brand as={Link} to="/" className="d-flex">
+          <img src={logo} alt="brand" className="navbar-logo-img" />
+          <span className="navbar-brand-text">
+            Aakash<span className="purple">.</span>
+          </span>
         </Navbar.Brand>
 
         <Navbar.Toggle
@@ -61,7 +59,12 @@ function NavBar() {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ms-auto" defaultActiveKey="#home">
             <Nav.Item>
-              <Nav.Link as={Link} to="/" onClick={() => updateExpanded(false)}>
+              <Nav.Link
+                as={Link}
+                to="/"
+                className={linkClass("/")}
+                onClick={() => updateExpanded(false)}
+              >
                 <AiOutlineHome style={{ marginBottom: "2px" }} /> Home
               </Nav.Link>
             </Nav.Item>
@@ -70,6 +73,7 @@ function NavBar() {
               <Nav.Link
                 as={Link}
                 to="/about"
+                className={linkClass("/about")}
                 onClick={() => updateExpanded(false)}
               >
                 <AiOutlineUser style={{ marginBottom: "2px" }} /> About
@@ -80,6 +84,7 @@ function NavBar() {
               <Nav.Link
                 as={Link}
                 to="/project"
+                className={linkClass("/project")}
                 onClick={() => updateExpanded(false)}
               >
                 <AiOutlineFundProjectionScreen
@@ -92,6 +97,7 @@ function NavBar() {
               <Nav.Link
                 as={Link}
                 to="/articles"
+                className={linkClass("/articles")}
                 onClick={() => updateExpanded(false)}
               >
                 <AiOutlineBook
@@ -105,6 +111,7 @@ function NavBar() {
               <Nav.Link
                 as={Link}
                 to="/resume"
+                className={linkClass("/resume")}
                 onClick={() => updateExpanded(false)}
               >
                 <CgFileDocument style={{ marginBottom: "2px" }} /> Resume
