@@ -16,7 +16,8 @@ function Home2() {
       <Container>
         <Row className="align-items-center">
           {/* Left Column - About Description */}
-          <Col md={8} className="home-about-description">
+          <Col md={8} className="home-about-description reveal">
+            <p className="section-kicker">Get To Know Me</p>
             <h1 style={{ fontSize: "2.6em" }}>
               Here’s The <span className="purple">Person</span> Behind The Code!
             </h1>
@@ -58,7 +59,7 @@ function Home2() {
           </Col>
 
           {/* Right Column - Avatar Image */}
-          <Col md={4} className="myAvtar text-center">
+          <Col md={4} className="myAvtar text-center reveal">
             <Tilt>
               <img
                 src={myImg}

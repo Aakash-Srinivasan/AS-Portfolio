@@ -15,12 +15,14 @@ function About() {
         <Row style={{ justifyContent: "center", padding: "10px" }}>
           <Col
             md={7}
+            className="reveal"
             style={{
               justifyContent: "center",
               paddingTop: "30px",
               paddingBottom: "50px",
             }}
           >
+            <p className="section-kicker">Introduction</p>
             <h1 style={{ fontSize: "2.1em", paddingBottom: "20px" }}>
             Let me paint a picture of who{" "}
               <strong className="purple">I'M</strong>
@@ -31,7 +33,7 @@ function About() {
           <Col
             md={5}
             style={{ paddingTop: "50px", paddingBottom: "0px" }}
-            className="about-img"
+            className="about-img reveal"
           >
             <img
               src={laptopImg}
@@ -45,15 +47,21 @@ function About() {
             />
           </Col>
         </Row>
-        <h1 className="project-heading">
-          Professional <strong className="purple">Skillset </strong>
-        </h1>
+        <div className="reveal">
+          <p className="section-kicker">Tech Stack</p>
+          <h1 className="project-heading">
+            Professional <strong className="purple">Skillset </strong>
+          </h1>
+        </div>
 
         <Techstack />
 
-        <h1 className="project-heading">
-          <strong className="purple">Tools</strong> I use
-        </h1>
+        <div className="reveal">
+          <p className="section-kicker">Tools</p>
+          <h1 className="project-heading">
+            <strong className="purple">Tools</strong> I use
+          </h1>
+        </div>
         <Toolstack />
 
         <Github />

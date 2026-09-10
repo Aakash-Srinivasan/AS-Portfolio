@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Container, Row, Spinner } from "react-bootstrap";
+import { Container, Row } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Particle from "../Particle";
 import pdf from "./Aakash-Srinivasan-CV.pdf";
@@ -33,19 +33,20 @@ function ResumeNew() {
     <div>
       <Container fluid className="resume-section" style={{ position: "relative" }}>
         <Particle />
+        <Row className="reveal">
+          <div className="text-center">
+            <p className="section-kicker">Experience</p>
+            <h1 className="project-heading" style={{ paddingBottom: "10px" }}>
+              My <strong className="purple">Resume</strong>
+            </h1>
+          </div>
+        </Row>
         <Row className="resume">
-          <div className="d-flex justify-content-center position-relative">
+          <div className="resume-pdf-wrapper d-flex justify-content-center align-items-center position-relative reveal">
             {loading && (
-              <div
-                style={{
-                  position: "absolute",
-                  top: "50%",
-                  left: "50%",
-                  transform: "translate(-50%, -50%)",
-                  zIndex: 10,
-                }}
-              >
-                <Spinner animation="border" variant="primary" />
+              <div className="resume-loader">
+                <span className="loader-ring"></span>
+                <p>Loading resume…</p>
               </div>
             )}
             {!loading && (
