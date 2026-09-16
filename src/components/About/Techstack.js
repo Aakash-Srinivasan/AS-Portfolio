@@ -13,6 +13,8 @@ import {
   SiTypescript,
   SiRedux,
   SiSqlite,
+  SiReactquery,
+  SiAxios,
 } from "react-icons/si";
 
 function Techstack() {
@@ -34,7 +36,13 @@ function Techstack() {
       <Col xs={4} md={2} className="tech-icons reveal">
       <SiRedux />
       </Col>
-    
+      <Col xs={4} md={2} className="tech-icons reveal">
+      <SiReactquery />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons reveal">
+      <SiAxios />
+      </Col>
+
       <Col xs={4} md={2} className="tech-icons reveal">
       <SiTailwindcss />
 

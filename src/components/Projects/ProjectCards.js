@@ -24,55 +24,46 @@ function ProjectCards(props) {
   return (
     <>
       <Card className="project-card-view">
-        <Card.Img variant="top" src={props.imgPath} alt="card-img" />
+        <Card.Img variant="top" src={props.imgPath} alt="card-img" loading="lazy" />
         <Card.Body>
-          <Card.Title>{props.title}</Card.Title>
-          <Card.Text style={{ textAlign: "justify" }}>
+          <Card.Title className="project-card-title-row">
+            {props.title}
+            {props.badge && <span className="project-card-badge">{props.badge}</span>}
+          </Card.Title>
+          <Card.Text style={{ textAlign: "left" }}>
             {props.description}
           </Card.Text>
 
-          <Button variant="primary" href={props.ghLink} target="_blank">
-            <BsGithub /> &nbsp; {"GitHub"}
-          </Button>
+          <div className="project-card-actions">
+            {props.ghLink && (
+              <Button variant="primary" href={props.ghLink} target="_blank">
+                <BsGithub /> &nbsp; {"GitHub"}
+              </Button>
+            )}
 
-          {"\n"} {"\n"}
+            {props.demoLink && (
+              <Button variant="primary" href={props.demoLink} target="_blank">
+                {props.ismobile ? <FaGooglePlay /> : <CgWebsite />}
+                &nbsp;
+                {props.demoLabel || (props.ismobile ? "Download" : "Demo")}
+              </Button>
+            )}
 
-          {props.demoLink && (
-            <Button
-              variant="primary"
-              href={props.demoLink}
-              target="_blank"
-              style={{ marginLeft: "10px" }}
-            >
-              {props.ismobile ? <FaGooglePlay /> : <CgWebsite />}
-              &nbsp;
-              {props.ismobile ? "Download" : "Demo"}
-            </Button>
-          )}
-
-          {props.videoPath && (
-            <Button
-              variant="success"
-              style={{ marginLeft: "10px", marginTop: "10px" }}
-              onClick={handleOpen}
-            >
-              <MdVideoCameraFront />
-              &nbsp;
-              Demo
-            </Button>
-          )}
-          {props.testingVideoPath && (
-            <Button
-              variant="success"
-              style={{ marginLeft: "10px", marginTop: "10px" }}
-              onClick={handleTestOpen}
-            >
-              <SiInductiveautomation />
-              &nbsp;
-              Test Demo
-            </Button>
-          )}
-
+            {props.videoPath && (
+              <Button variant="success" onClick={handleOpen}>
+                <MdVideoCameraFront />
+                &nbsp;
+                Demo
+              </Button>
+            )}
+            {props.testingVideoPath && (
+              <Button variant="success" onClick={handleTestOpen}>
+                <SiInductiveautomation />
+                &nbsp;
+                Test Demo
+              </Button>
+            )}
+          </div>
         </Card.Body>
       </Card>
       <Modal show={testingShowModal} className="project-card" onHide={handleTestClose} size="md" centered >

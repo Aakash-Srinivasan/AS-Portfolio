@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
-import logo from "../Assets/logo.png";
+import logo from "../Assets/logo.webp";
 import { Link, useLocation } from "react-router-dom";
 import {
   AiOutlineHome,
@@ -18,15 +18,13 @@ function NavBar() {
   const [navColour, updateNavbar] = useState(false);
   const location = useLocation();
 
-  function scrollHandler() {
-    if (window.scrollY >= 20) {
-      updateNavbar(true);
-    } else {
-      updateNavbar(false);
+  useEffect(() => {
+    function scrollHandler() {
+      updateNavbar(window.scrollY >= 20);
     }
-  }
-
-  window.addEventListener("scroll", scrollHandler);
+    window.addEventListener("scroll", scrollHandler);
+    return () => window.removeEventListener("scroll", scrollHandler);
+  }, []);
 
   const linkClass = (path) =>
     location.pathname === path ? "nav-link-active" : "";

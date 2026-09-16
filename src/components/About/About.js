@@ -1,16 +1,14 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import Particle from "../Particle";
 import Github from "./Github";
 import Techstack from "./Techstack";
 import Aboutcard from "./AboutCard";
-import laptopImg from "../../Assets/about.png";
+import laptopImg from "../../Assets/about.webp";
 import Toolstack from "./Toolstack";
 
 function About() {
   return (
     <Container fluid className="about-section">
-      <Particle />
       <Container>
         <Row style={{ justifyContent: "center", padding: "10px" }}>
           <Col
@@ -25,7 +23,7 @@ function About() {
             <p className="section-kicker">Introduction</p>
             <h1 style={{ fontSize: "2.1em", paddingBottom: "20px" }}>
             Let me paint a picture of who{" "}
-              <strong className="purple">I'M</strong>
+              <strong className="purple">I'm</strong>
             </h1>
 
             <Aboutcard />

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Preloader from "../src/components/Pre";
+import Particle from "./components/Particle";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home/Home";
 import About from "./components/About/About";
@@ -23,18 +24,47 @@ import Articles from "./components/Articles/Articles";
 function App() {
   const [load, upadateLoad] = useState(true);
 
+  // Waits for the page to actually finish loading (not a fixed delay), with
+  // a short minimum so the preloader doesn't flash on an instant/cached
+  // load, and a safety cap in case `load` is held up by a slow resource.
   useEffect(() => {
-    const timer = setTimeout(() => {
-      upadateLoad(false);
-    }, 1200);
+    let minTimeElapsed = false;
+    let pageLoaded = document.readyState === "complete";
 
-    return () => clearTimeout(timer);
+    const tryHide = () => {
+      if (minTimeElapsed && pageLoaded) upadateLoad(false);
+    };
+
+    const minTimer = setTimeout(() => {
+      minTimeElapsed = true;
+      tryHide();
+    }, 400);
+
+    const onLoad = () => {
+      pageLoaded = true;
+      tryHide();
+    };
+
+    if (pageLoaded) {
+      onLoad();
+    } else {
+      window.addEventListener("load", onLoad);
+    }
+
+    const maxTimer = setTimeout(() => upadateLoad(false), 4000);
+
+    return () => {
+      clearTimeout(minTimer);
+      clearTimeout(maxTimer);
+      window.removeEventListener("load", onLoad);
+    };
   }, []);
 
   return (
     <Router>
       <Preloader load={load} />
       <div className="App" id={load ? "no-scroll" : "scroll"}>
+        <Particle />
         <Navbar />
         <ScrollToTop />
         <ScrollReveal />

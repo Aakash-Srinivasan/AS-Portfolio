@@ -1,27 +1,49 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
+import { FiExternalLink } from "react-icons/fi";
 import ProjectCard from "./ProjectCards";
-import Particle from "../Particle";
-import Razorcart from "../../Assets/Projects/Razorcart.png";
+import TeleMedix from "../../Assets/Projects/TeleMedix.png";
+import Actavivo from "../../Assets/Projects/Actavivo.png";
+import BlockManagement from "../../Assets/Projects/BlockManagement.png";
+import SubscriptionMgmt from "../../Assets/Projects/SubscriptionMgmt.png";
+import WimCart from "../../Assets/Projects/WimCart.png";
 import Proscanner from "../../Assets/Projects/ProScanner.png";
-import CupidLab from "../../Assets/Projects/cupidlab.png";
-import Swipes from "../../Assets/Projects/swipes.png";
-import Expense from "../../Assets/Projects/expense.png";
-import Todolist from "../../Assets/Projects/Todolist.png";
-import Drafter from "../../Assets/Projects/drafter.png";
-import HealTime from "../../Assets/Projects/HealTime.png"
-import DB from "../../Assets/Projects/DB.png";
-import serverless from "../../Assets/Projects/Serverless.png";
+import ProscannerPro from "../../Assets/Projects/ProScannerPro.png";
+import CupidLab from "../../Assets/Projects/cupidlab.webp";
+import Swipes from "../../Assets/Projects/swipes.webp";
+import Drafter from "../../Assets/Projects/drafter.webp";
+import HealTime from "../../Assets/Projects/HealTime.webp"
 import video1 from '../../Assets/DemoVideo/swipe.mp4';
-import video2 from '../../Assets/DemoVideo/expense.mp4';
 import video3 from '../../Assets/DemoVideo/video3.mp4';
 import video4 from '../../Assets/DemoVideo/medic.mp4';
 import testDemo from '../../Assets/DemoVideo/testDemo.mp4';
 
+// Shows a client's company name as plain text with a small external-link
+// icon next to it (instead of underlining the whole name) so the reader
+// isn't left guessing whether "Coimbatore." itself is a clickable phrase.
+function CompanyTag({ name, url }) {
+  return (
+    <>
+      <span className="purple">{name}</span>
+      {url && (
+        <a
+          href={url}
+          target="_blank"
+          rel="noreferrer"
+          className="project-card-company-icon"
+          aria-label={`Visit ${name}'s website`}
+          title={`Visit ${name}'s website`}
+        >
+          <FiExternalLink />
+        </a>
+      )}
+    </>
+  );
+}
+
 function Projects() {
   return (
     <Container fluid className="project-section">
-      <Particle />
       <Container>
         <div className="reveal">
           <p className="section-kicker">Portfolio</p>
@@ -32,15 +54,80 @@ function Projects() {
             Here are a few projects I've worked on recently.
           </p>
         </div>
+        <p className="project-section-label reveal">Client Work</p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+          <Col md={4} className="project-card reveal">
+            <ProjectCard
+              imgPath={Actavivo}
+              ismobile={true}
+              title="Actavivo"
+              badge="Client Project"
+              description={<>A free team communication app for sports clubs, groups, and organizations — group messaging, activity and RSVP management, and social sharing, live on the App Store and Google Play. I worked on this already-in-production app for several months, resolving bugs and shipping new features before moving on to TeleMedix. — <CompanyTag name="App Innovation Technologies, Coimbatore" url="https://www.aitechindia.com" /></>}
+              demoLink="https://actavivo.net/"
+              demoLabel="Website"
+            />
+          </Col>
+          <Col md={4} className="project-card reveal">
+            <ProjectCard
+              imgPath={TeleMedix}
+              ismobile={false}
+              title="TeleMedix"
+              badge="Client Project"
+              description={<>A HIPAA-oriented telehealth platform connecting patients and providers for video visits and virtual care. I've been contributing to the provider-facing medical record retrieval workflow — a paginated dashboard tracking record-retrieval jobs across external health networks, drilling into a CCDA-style longitudinal record viewer (problems, medications, allergies, procedures, vitals) — along with an AI-driven clinical decision support (CDSS) chat that dynamically renders its UI from backend-supplied data. — <CompanyTag name="App Innovation Technologies, Coimbatore" url="https://www.aitechindia.com" /></>}
+              demoLink="https://telemedix.net/"
+              demoLabel="Website"
+            />
+          </Col>
+          <Col md={4} className="project-card reveal">
+            <ProjectCard
+              imgPath={BlockManagement}
+              ismobile={true}
+              title="Block Management System"
+              badge="Client Project"
+              description={<>A React Native + Expo mobile app for railway block management — an approval workflow system with push notifications and real-time updates. Later extended into a Task Management System with multi-stage approval chains, status tracking, and a commenting system. — <CompanyTag name="Plattr Tech Studio, Madurai" url="https://www.plattrtechstudio.com" /></>}
+            />
+          </Col>
+          <Col md={4} className="project-card reveal">
+            <ProjectCard
+              imgPath={SubscriptionMgmt}
+              ismobile={true}
+              title="Subscription Management"
+              badge="Client Project"
+              description={<>A React Native mobile app helping small businesses manage customer subscriptions — image uploads, user management, and REST API sync. — <CompanyTag name="Anjane Technologies, Chennai" url="https://anjane.tech/" /> (outsourced via <CompanyTag name="Plattr Tech Studio" url="https://www.plattrtechstudio.com" />).</>}
+            />
+          </Col>
+          <Col md={4} className="project-card reveal">
+            <ProjectCard
+              imgPath={WimCart}
+              ismobile={true}
+              title="Wim Cart"
+              badge="Client Project"
+              description={<>A complete e-commerce mobile app built with React Native, TypeScript, and Redux — product listings, cart, order tracking, map-pin delivery selection, and user authentication, with a responsive UI built using NativeWind and Styled Components. — <CompanyTag name="Plattr Tech Studio, Madurai" url="https://www.plattrtechstudio.com" /></>}
+            />
+          </Col>
           <Col md={4} className="project-card reveal">
             <ProjectCard
               imgPath={Proscanner}
               ismobile={true}
               title="Pro Scanner Lite"
-              description="Pro Scanner Lite is my first mobile app built with bare React Native. It allows users to capture images using the camera or select photos from the gallery and instantly convert them into PDF documents — simple, fast, and offline!"
+              badge="Client Project"
+              description={<>An earlier document scanner built with bare React Native (no Expo) — captures photos via camera or gallery and converts them into PDF documents instantly, fully offline. Published and live on the Google Play Store. — <CompanyTag name="Plattr Tech Studio, Madurai" url="https://www.plattrtechstudio.com" /></>}
               ghLink="https://github.com/Guru-Pravin/Proscanner-lite#"
               demoLink="https://play.google.com/store/apps/details?id=com.proscannerlite"
+            />
+          </Col>
+        </Row>
+
+        <p className="project-section-label reveal">Personal Projects</p>
+        <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+          <Col md={4} className="project-card reveal">
+            <ProjectCard
+              imgPath={ProscannerPro}
+              ismobile={true}
+              title="Pro Scanner"
+              badge="New"
+              description="Pro Scanner is a full-featured document scanner app built entirely on Expo (Expo Go compatible, no native modules). Capture pages with manual perspective correction and filters, reorder and manage multi-page documents, then compress, e-sign, or scan barcodes — all with pdf.js running inside a hidden WebView for on-device PDF rendering. Includes History with local backup/restore, and full light/dark theming."
+              ghLink="https://github.com/Aakash-Srinivasan/pro-scanner"
             />
           </Col>
           <Col md={4} className="project-card reveal">
@@ -48,7 +135,7 @@ function Projects() {
               imgPath={CupidLab}
               ismobile={true}
               title="Cupid's Lab"
-              description="As a beginner in mobile development, I wanted to challenge myself beyond the usual to-do or weather apps. Using React Native and Expo, I built a playful app that matches love by names, calculates compatibility, suggests pickup lines, generates date ideas, and even creates Love Agreements — all while getting real-world hands-on experience and collecting smart user feedback."
+              description="A playful React Native + Expo app built around a whole set of lighthearted relationship games — FLAMES-style name matching, compatibility scoring, pickup line and date idea generators, age prediction, coin toss, star sign matching, truth-or-dare, and PDF 'Love Agreement' export — built to explore a more expressive, personality-driven UI than a typical utility app, with in-app feedback collection to guide iteration."
               ghLink="https://github.com/Aakash-Srinivasan/valentine"
             />
           </Col>
@@ -61,18 +148,6 @@ function Projects() {
               description="This project showcases my experience building a Tinder-style swipe animation using React Native Reanimated 3. The goal was to create a smooth, interactive user interface where cards could be swiped left or right, mimicking the functionality found in apps like Tinder."
               ghLink="https://github.com/Aakash-Srinivasan/swipeUI"
               videoPath={video1}
-            />
-          </Col>
-
-          <Col md={4} className="project-card reveal">
-            <ProjectCard
-              imgPath={Expense}
-              ismobile={true}
-              title="Expense Tracker"
-              description="Expense Tracker
-Built a React Native app with full offline capabilities using SQLite for local storage and Supabase for cloud sync. Implemented queued actions, network state detection, and Drizzle ORM for seamless syncing. Users can add, edit, and delete expenses offline with automatic synchronization when back online."
-              ghLink="https://github.com/Aakash-Srinivasan/Expense-Tracker"
-              videoPath={video2}
             />
           </Col>
 
@@ -96,44 +171,6 @@ A local notes app built with Expo featuring full CRUD, dynamic light/dark theme 
               ghLink="https://github.com/Aakash-Srinivasan/Medic.git"
               videoPath={video4}
               testingVideoPath={testDemo}
-            />
-          </Col>
-
-          <Col md={4} className="project-card reveal">
-            <ProjectCard
-              imgPath={Razorcart}
-              ismobile={false}
-              title="Razorcart "
-              description="This repository contains the code for a simple e-commerce website built using React.js and Chakra UI. The website allows users to browse through various products and make purchases using the Razorcart payment gateway and also used AWS (DynamoDB) to store the all Payments."
-              ghLink="https://github.com/Aakash-Srinivasan/Ecommerce(Razorcart)"
-              demoLink="https://d3ufb1e959ciue.cloudfront.net/"
-            />
-          </Col>
-          <Col md={4} className="project-card reveal">
-            <ProjectCard
-              imgPath={serverless}
-              ismobile={false}
-              title="Serverless-TodoAPI"
-              description="Serverless-TodoApi is a lightweight and scalable solution for managing todo lists using serverless architecture. Built with simplicity and efficiency in mind, this project leverages serverless computing technologies to offer a robust API for creating, updating, deleting, and retrieving todo items."
-              ghLink="https://github.com/Aakash-Srinivasan/Serverless-TodoApi"
-            />
-          </Col>
-          <Col md={4} className="project-card reveal">
-            <ProjectCard
-              imgPath={DB}
-              ismobile={false}
-              title="Unox-DB"
-              description="Unox Multiplexes Inc. aims to develop an online portal enabling customers to conveniently book tickets for movie screenings over the internet. This project entails the creation of a robust web application to manage movie schedules, seating capacities, ticket rates, movie information, and user bookings."
-              ghLink="https://github.com/Aakash-Srinivasan/UNOX-DB"
-            />
-          </Col>
-          <Col md={4} className="project-card reveal">
-            <ProjectCard
-              imgPath={Todolist}
-              ismobile={false}
-              title="To-Do-List"
-              description="This To-Do List application allows users to manage their tasks efficiently. Users can add, edit, delete, and mark tasks as completed or incomplete."
-              ghLink="https://github.com/Aakash-Srinivasan/To-Do-List"
             />
           </Col>
         </Row>

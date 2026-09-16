@@ -617,7 +617,7 @@ h4 {
   padding-bottom: 22px !important;
   padding-left: 15px !important;
   padding-right: 15px !important;
-  height: auto !important;
+  display: flex !important;
 }
 
 .project-card-view {
@@ -642,6 +642,8 @@ h4 {
 
 .project-card-view .card-body {
   padding: 1.6rem !important;
+  display: flex;
+  flex-direction: column;
 }
 
 .project-card-view .card-title {
@@ -655,6 +657,55 @@ h4 {
   color: var(--text-secondary) !important;
   font-size: 0.95rem;
   line-height: 1.7;
+}
+
+.project-card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: auto;
+  padding-top: 0.75rem;
+}
+
+/* A single button has nothing to "space between", so it sticks to the left
+   under space-between - center it instead when it's the only action. */
+.project-card-actions > *:only-child {
+  margin: 0 auto;
+}
+
+.project-card-title-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.project-card-company-icon {
+  display: inline-flex;
+  color: var(--accent-soft) !important;
+  margin-left: 0.35em;
+  font-size: 0.85em;
+  vertical-align: -1px;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.project-card-company-icon:hover {
+  color: var(--accent) !important;
+  transform: translate(1px, -1px);
+}
+
+.project-card-badge {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  background: linear-gradient(135deg, var(--accent), var(--accent-deep));
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  text-transform: uppercase;
+  line-height: 1.4;
 }
 
 .blog-card {
@@ -825,6 +876,17 @@ h4 {
   }
 }
 
+/* On wide screens the bio text runs much longer than the image, leaving a
+   large empty gap below it - keep the image in view alongside the text
+   instead, rather than letting it strand itself at the top. */
+@media (min-width: 768px) {
+  .about-img {
+    align-self: flex-start;
+    position: sticky;
+    top: 110px;
+  }
+}
+
 .github-calendar-row {
   overflow-x: auto;
   padding-bottom: 0.5rem;
@@ -888,6 +950,44 @@ h4 {
   to {
     transform: rotate(360deg);
   }
+}
+
+.resume-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.resume-page-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: var(--surface);
+  border: 1px solid var(--border-soft);
+  color: var(--text-primary);
+  border-radius: var(--radius-m);
+  padding: 0.4rem 0.9rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.resume-page-btn:hover:not(:disabled) {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.resume-page-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.resume-page-indicator {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
 }
 
 .resume-left {
@@ -1078,6 +1178,17 @@ h4 {
   margin-bottom: 0.7rem;
 }
 
+.project-section-label {
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  color: var(--accent-soft);
+  padding-bottom: 0.6rem;
+  margin: 0 0 1.2rem;
+  border-bottom: 1px solid var(--border-soft);
+}
+
 /* --------- */
 /* Floating CTA */
 /* --------- */
@@ -1096,13 +1207,17 @@ h4 {
   font-size: 1.4rem;
   box-shadow: var(--shadow-glow);
   z-index: 1000;
-  transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease);
+  transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease), opacity 0.25s var(--ease);
   text-decoration: none;
 }
 
 .floating-cta:hover {
   transform: translateY(-4px) scale(1.06);
   color: #fff !important;
+}
+
+.floating-cta.is-dimmed {
+  opacity: 0.25;
 }
 
 @media (max-width: 767px) {

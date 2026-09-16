@@ -1,19 +1,17 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import Particle from "../Particle";
-import yourFirstArticleImage from "../../Assets/Articles/image1.png";
-import yourSecondArticleImage from "../../Assets/Articles/image2.png";
-import yourthirdarticleImage from "../../Assets/Articles/My Journey with React Native Reanimated 3.png";
+import yourFirstArticleImage from "../../Assets/Articles/image1.webp";
+import yourSecondArticleImage from "../../Assets/Articles/image2.webp";
+import yourthirdarticleImage from "../../Assets/Articles/My Journey with React Native Reanimated 3.webp";
 import ArticlesCards from "./ArticlesCards";
-import yourfourtharticleImage from "../../Assets/Articles/expense.png";
-import yourfiftharticleImage from "../../Assets/Articles/drafter.png";
-import heal from "../../Assets/Articles/heal.png";
-import testArticle from '../../Assets/Articles/testArticle.png';
+import yourfourtharticleImage from "../../Assets/Articles/expense.webp";
+import yourfiftharticleImage from "../../Assets/Articles/drafter.webp";
+import heal from "../../Assets/Articles/heal.webp";
+import testArticle from '../../Assets/Articles/testArticle.webp';
 
 function Articles() {
   return (
     <Container fluid className="project-section">
-      <Particle />
       <Container>
         <div className="reveal">
           <p className="section-kicker">Writing</p>

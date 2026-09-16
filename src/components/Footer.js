@@ -18,7 +18,7 @@ function Footer() {
           <h3>Designed and Developed by Aakash Srinivasan</h3>
         </Col>
         <Col md="4" className="footer-copywright">
-          <h3>Copyright © {year} aakash</h3>
+          <h3>Copyright © {year} Aakash Srinivasan</h3>
         </Col>
         <Col md="4" className="footer-body">
           <ul className="footer-icons">
@@ -44,7 +44,7 @@ function Footer() {
             </li>
             <li className="social-icons">
               <a
-                href="https://www.linkedin.com/in/aakash-srinivasan-780189246/"
+                href="https://www.linkedin.com/in/aakash-srinivasan-9258b2257/"
                 style={{ color: "white" }}
                 target="_blank" 
                 rel="noopener noreferrer"
@@ -54,9 +54,9 @@ function Footer() {
             </li>
             <li className="social-icons">
               <a
-                href="https://www.instagram.com/_.aakash_srinivasan._/"
+                href="https://medium.com/@aakash4367595"
                 style={{ color: "white" }}
-                target="_blank" 
+                target="_blank"
                 rel="noopener noreferrer"
               >
                 <AiFillMediumCircle />
